@@ -12,4 +12,9 @@ describe('timestamp api', () => {
     const { body } = await request(timestampApi).get(`/api/timestamp/${date}`)
     expect(body).toEqual(expected)
   })
+
+  it('handles a valid unix timestamp', async () => {
+    const { body } = await request(timestampApi).get(`/api/timestamp/${expected.unix}`)
+    expect(body).toEqual(expected)
+  })
 })
