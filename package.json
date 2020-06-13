@@ -44,7 +44,8 @@
     "lint:fix": "eslint ./src --fix",
     "build": "yarn run build:types && yarn run build:js",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "build:docker": "docker build -t asteffey/timestamp-microservice ."
   },
   "nodemonConfig": {
     "ignore": [
