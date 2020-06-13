@@ -29,4 +29,8 @@ timestampApi.get('/api/timestamp/:value', ({ params: { value } }, res) => {
   res.json(getResponse(value))
 })
 
+timestampApi.get('/api/timestamp', (_, res) => {
+  res.json(toTimestamp(new Date(Date.now())))
+})
+
 export default timestampApi

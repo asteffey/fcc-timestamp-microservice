@@ -22,4 +22,10 @@ describe('timestamp api', () => {
     const { body: { error } } = await request(timestampApi).get('/api/timestamp/this-is-not-a-date')
     expect(error.toLowerCase()).toEqual('invalid date')
   })
+
+  it('treats empty date parameter as current time', async () => {
+    jest.spyOn(Date, 'now').mockImplementation(() => expected.unix)
+    const { body } = await request(timestampApi).get('/api/timestamp')
+    expect(body).toEqual(expected)
+  })
 })
