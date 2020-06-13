@@ -24,6 +24,8 @@ function toTimestamp (date: Date) {
 
 timestampApi.use(cors({ optionsSuccessStatus: 200 }))
 
+timestampApi.use(express.static('public'))
+
 timestampApi.get('/api/timestamp/:value(\\d+)', ({ params: { value } }, res) => {
   res.json(getResponse(Number(value)))
 })
