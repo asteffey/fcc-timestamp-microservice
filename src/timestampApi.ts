@@ -1,3 +1,4 @@
+import cors from 'cors'
 import express from 'express'
 import parseDate from './parseDate'
 
@@ -20,6 +21,8 @@ function toTimestamp (date: Date) {
     utc: date.toUTCString()
   }
 }
+
+timestampApi.use(cors({ optionsSuccessStatus: 200 }))
 
 timestampApi.get('/api/timestamp/:value(\\d+)', ({ params: { value } }, res) => {
   res.json(getResponse(Number(value)))
