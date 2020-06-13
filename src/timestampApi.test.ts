@@ -17,4 +17,9 @@ describe('timestamp api', () => {
     const { body } = await request(timestampApi).get(`/api/timestamp/${expected.unix}`)
     expect(body).toEqual(expected)
   })
+
+  it('returns the expected error message for an invalid date', async () => {
+    const { body: { error } } = await request(timestampApi).get('/api/timestamp/this-is-not-a-date')
+    expect(error.toLowerCase()).toEqual('invalid date')
+  })
 })
