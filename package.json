@@ -56,5 +56,8 @@
     ],
     "exec": "npm start",
     "ext": "ts"
+  },
+  "engines": {
+    "yarn": "1.x"
   }
 }
