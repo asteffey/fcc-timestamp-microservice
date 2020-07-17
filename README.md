@@ -1,6 +1,6 @@
 ## APIs and Microservices Projects - Timestamp Microservice
 
-[![Build Status](https://travis-ci.org/asteffey/timestamp-microservice.svg?branch=master)](https://travis-ci.org/asteffey/timestamp-microservice)
+[![Build Status](https://travis-ci.org/asteffey/fcc-timestamp-microservice.svg?branch=master)](https://travis-ci.org/asteffey/fcc-timestamp-microservice)
 [![Heroku](http://heroku-badge.herokuapp.com/?app=asteffey-timestamp-node)](https://asteffey-timestamp-node.herokuapp.com/)
 
 This is a [freeCodeCamp](https://www.freecodecamp.org/) project to demonstrate a Timestamp microservice using Node and Express.
